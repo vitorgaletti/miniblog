@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthentication } from './hooks/useAuthentication';
 import { useState, useEffect } from 'react';
 
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider } from './contexts/AuthContext';
 import { onAuthStateChanged } from 'firebase/auth';
 
 import { Navbar } from './components/Navbar';
