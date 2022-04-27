@@ -22,13 +22,30 @@ export function CreatePost() {
     e.preventDefault();
     setFormError('');
 
+    try {
+      new URL(image);
+    } catch (error) {
+      setFormError('A imagem precisa ser uma URL.');
+    }
+
+    const tagsArray = tags.split(',').map(tag => tag.trim().toLowerCase());
+
+    if (!title || !image || !tags || !body) {
+      setFormError('Por favor, preencha todos os campos!');
+    }
+
+    if (formError) return;
+
     insertDocument({
       title,
       image,
       body,
+      tagsArray,
       uid: user.uid,
       createdBy: user.displayName
     });
+
+    navigate('/');
   }
 
   return (
