@@ -5,8 +5,7 @@ import {
   query,
   orderBy,
   onSnapshot,
-  where,
-  QuerySnapshot
+  where
 } from 'firebase/firestore';
 
 export function useFetchDocuments(docColletion, search = null, uid = null) {
@@ -55,7 +54,7 @@ export function useFetchDocuments(docColletion, search = null, uid = null) {
     }
 
     loadData();
-  }, [docColletion, search, uid, cancelled]);
+  }, [docColletion, documents, search, uid, cancelled]);
 
   useEffect(() => {
     return () => setCancelled(true);
