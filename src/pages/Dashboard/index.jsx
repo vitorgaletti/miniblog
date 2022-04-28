@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 import { useAuthValue } from '../../contexts/AuthContext';
 
+import { useDeleteDocument } from '../../hooks/useDeleteDocument';
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 
 import styles from './styles.module.css';
@@ -12,10 +13,10 @@ export function Dashboard() {
 
   const { documents: posts, loading } = useFetchDocuments('posts', null, uid);
 
-  function deleteDocument(id) {
-    if (loading) {
-      return <p>Carregando...</p>;
-    }
+  const { deleteDocument } = useDeleteDocument('posts');
+
+  if (loading) {
+    return <p>Carregando...</p>;
   }
 
   return (
