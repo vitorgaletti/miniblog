@@ -109,3 +109,35 @@ button[dislabed] {
   padding: 5px;
   border-radius: 5px;
 }
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 95.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+/* Mobile S */
+@media (max-width: 320px) {
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 0.75rem;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 0.75rem;
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 0.75rem;
+  }
+  :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 0.75rem;
+  }
+}

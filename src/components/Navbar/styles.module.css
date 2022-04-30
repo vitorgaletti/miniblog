@@ -29,3 +29,29 @@
   background-color: #000;
   color: #fff;
 }
+
+/* Mobile S */
+@media (max-width: 320px) {
+  .brand {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile L */
+@media (max-width: 425px) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+}
+
+/* Tablet */

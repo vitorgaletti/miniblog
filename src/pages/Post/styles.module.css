@@ -18,3 +18,48 @@
 .tags span {
   font-weight: bold;
 }
+
+/* Mobile M */
+@media (max-width: 375px) {
+  .post_container {
+    padding: 0 0.5rem;
+  }
+
+  .post_container h1 {
+    font-size: 1.5rem;
+  }
+
+  .post_container img {
+    max-width: 20rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile L */
+@media (max-width: 425px) {
+  .post_container h1 {
+    font-size: 1.5rem;
+  }
+
+  .post_container img {
+    max-width: 28rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 702px) {
+  .post_container {
+    padding: 0 0.5rem;
+  }
+
+  .post_container img {
+    max-width: 35rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}

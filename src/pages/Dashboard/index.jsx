@@ -42,7 +42,7 @@ export function Dashboard() {
               <div key={post.id} className={styles.post_row}>
                 <p>{post.title}</p>
 
-                <div>
+                <div className={styles.actions}>
                   <Link to={`/posts/${post.id}`} className="btn btn-outline">
                     Ver
                   </Link>
